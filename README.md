@@ -34,17 +34,20 @@ Ce projet web propose à l’utilisateur de tirer au hasard **12 messages inspir
 
 ---
 
-## 🗃️ Organisation des fichiers
+ORACLE_HOROSCOPE/
 
-├── index.html → Page principale
-├── assets/
-│ ├── css/
-│ │ └── style.css → Feuille de style principale
-│ ├── js/
-│ │ └── main.js → Script JavaScript (API + affichage)
-│ ├── images/
-│ │ └── background.jpg → Image de fond étoilé
-│ │ └── crystal-ball.png → Icône boule de cristal
+├── index.html                 → Page principale de l'application
+├── .htaccess                  → Fichier de configuration serveur (déploiement)
+├── .gitignore                 → Fichier pour ignorer les fichiers/dossiers inutiles dans Git
+├── README.md                  → Présentation du projet
+├── assets/                   → Dossier des ressources
+│   ├── css/
+│   │   └── style.css          → Feuille de style principale
+│   ├── js/
+│   │   └── main.js            → Script JavaScript (API, horloge, interactions)
+│   ├── images/
+│   │   └── background.jpg     → Image de fond de l’interface
+
 
 
 ---

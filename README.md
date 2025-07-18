@@ -81,7 +81,7 @@ Ouvrir index.html dans votre navigateur (aucun serveur requis pour tester en loc
 
 
 🔗 Lien vers le dépôt GitHub
-👉 [https://github.com/ton-utilisateur/horoscope-oracle (à remplacer)]
+👉 [ https://github.com/GILBERT86-debugue/horoscope.git]
 
 
 

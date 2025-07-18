@@ -1,0 +1,452 @@
+/* === Reset général === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === Body === */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background: url('../images/background.jpg') center/cover no-repeat fixed;
+}
+
+/* === Titre === */
+.titre-horoscope {
+  position: fixed;
+  top: 1px;
+  left: 1px;
+  font-size: 1.5rem;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: rgba(65, 16, 130, 0.551);
+  z-index: 10;
+  max-width: 90vw;
+  word-wrap: break-word;
+  text-align: center;
+  text-shadow:
+    0 0 10px #ffd700,
+    0 0 20px #ff00ff,
+    0 0 30px #00ffff;
+  animation: glowFade 3s ease-in-out infinite alternate, wave 4s infinite ease-in-out;
+}
+.titre-horoscope span {
+  color: #811616;
+}
+.titre-horoscope span::after {
+  content: " bravo";
+  display: block;
+  height: 0.1rem;
+  background-color: #c4d3da00;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+/* === Container & Card === */
+.container {
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  border-radius: 30px;
+  background: rgba(35, 3, 116, 0.303);
+  box-shadow: 0 0 15px rgba(213, 191, 191, 0.4);
+  padding: 2rem;
+}
+
+.card {
+  background: rgba(23, 22, 90, 0.8);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  max-height: 90vh;
+  overflow-y: auto;
+  text-align: center;
+  min-height: 250px;
+}
+
+/* === Crystal Ball === */
+.crystal-wrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 2rem auto;
+}
+
+.circular-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 13px;
+  fill: rgb(125, 6, 6);
+  pointer-events: none;
+  animation: rotateText 10s linear infinite;
+  transform-origin: center;
+  text-align: center;
+}
+
+.crystal-ball {
+  width: 100px;
+  height: 100px;
+  
+
+
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+  animation: pulse 3s infinite;
+  cursor: pointer;
+}
+.crystal-ball:hover {
+  transform: translate(-50%, -50%);
+}
+
+/* === Animations === */
+@keyframes rotateText {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 15px rgba(0, 255, 255, 0.2); }
+  50% { box-shadow: 0 0 30px rgba(0, 255, 255, 0.6); }
+}
+
+@keyframes glowFade {
+  0% {
+    text-shadow:
+      0 0 5px #ffd700,
+      0 0 10px #ff00ff,
+      0 0 15px #00ffff;
+  }
+  100% {
+    text-shadow:
+      0 0 20px #ffd700,
+      0 0 30px #ff00ff,
+      0 0 40px #00ffff;
+  }
+}
+
+@keyframes wave {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeInText {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* === Divers === */
+.description {
+  font-size: 1rem;
+  text-align: center;
+  color: rgb(168, 60, 60);
+  margin: 1.5rem auto;
+  max-width: 300px;
+  animation: fadeInText 1s ease forwards;
+}
+
+#loader {
+  color: #4000ff;
+  font-weight: bold;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  animation : fadeInText 1s ease forwards;
+  animation-delay: 1s;
+  
+  
+
+}
+
+.hidden { display: none; }
+
+.error {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: #ffcccc;
+  color: #990000;
+}
+
+/* === Résultats === */
+.result {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  max-height: 500px;
+  overflow-y: auto;
+  border-radius: 10px;
+  background: rgb(190, 10, 37);
+}
+
+.card-item {
+  background: #35096e;
+  color: glacered;
+  border: 1px solid #f0f0f0;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out;
+  text-align: center;
+  min-height: 120px;
+}
+.card-item:hover {
+  transform: scale(1.03);
+}
+
+/* Apparition différée */
+.card-item:nth-child(n) {
+  animation: fadeInUp 0.6s ease forwards;
+}
+.card-item:nth-child(1)  { animation-delay: 0.1s; }
+.card-item:nth-child(2)  { animation-delay: 0.2s; }
+/* ... Jusqu'à 12 comme avant */
+
+/* === Horloge === */
+.clock {
+  position: fixed;
+  top: 1px;
+  right: 1px;
+  font-size: 1.5rem;
+  color: #ede5e5;
+  background-color: rgba(52, 10, 106, 0.734);
+  padding:0.5rem 1rem;
+  border-radius: 1000px;
+  font-family: 'Segoe UI', sans-serif;
+  text-shadow:
+    0 0 10px #ffd700,
+    0 0 20px #e8e1e8,
+    0 0 30px #00ffff;
+  animation: glowFade 3s ease-in-out infinite alternate, wave 4s infinite ease-in-out;
+  z-index: 100;
+
+}
+
+
+
+/* === Smartphones Portrait - Très petits écrans (iPhone SE, XR, etc.) === */
+@media (max-width: 375px) {
+  .titre-horoscope {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.5rem;
+    top: 5px;
+    left: 5px;
+    max-width: 80vw;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 0.8rem;
+  }
+
+  .crystal-wrapper {
+    width: 140px;
+    height: 140px;
+  }
+
+  .crystal-ball {
+    width: 70px;
+    height: 70px;
+  }
+
+  .circular-text {
+    font-size: 10px;
+    width: 140px;
+    height: 140px;
+  }
+
+  .result {
+    padding: 0.3rem;
+  }
+
+  .card-item {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .clock {
+    font-size: 1rem;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+/* === Smartphones/Tablettes Portrait jusqu'à 768px === */
+@media (max-width: 768px) {
+  .titre-horoscope {
+    font-size: 1.2rem;
+    top: 10px;
+    left: 10px;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .container {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .crystal-wrapper {
+    width: 160px;
+    height: 160px;
+  }
+
+  .crystal-ball {
+    width: 80px;
+    height: 80px;
+  }
+
+  .circular-text {
+    font-size: 11px;
+    width: 160px;
+    height: 160px;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+
+  .result {
+    grid-template-columns: 1fr;
+    padding: 0.5rem;
+  }
+
+  .card-item {
+    width: 100%;
+  }
+}
+
+/* === Paysages étroits type iPhone XR horizontal / tablettes === */
+@media screen and (orientation: landscape) and (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .card {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .result {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* === Écrans intermédiaires horizontaux type tablettes (iPad) === */
+@media screen and (orientation: landscape) and (max-width: 896px) {
+  .container {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1rem;
+    max-height: 80vh;
+  }
+
+  .crystal-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+
+  .crystal-ball {
+    width: 80px;
+    height: 80px;
+  }
+
+  .circular-text {
+    font-size: 10px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .clock {
+    font-size: 1rem;
+    top: 10px;
+    right: 10px; /* <-- remet à droite */
+    padding: 0.3rem 0.6rem;
+    position: fixed;
+}
+
+
+
+  .titre-horoscope {
+    font-size: 1.1rem;
+    top: 10px;
+    left: 10px;
+    padding: 0.3rem 0.6rem;
+    max-width: 80vw;
+    
+  }
+
+  .result {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+/* === Petites hauteurs d’écran (téléphones pliables ou navigation split-screen) === */
+@media screen and (max-height: 600px) {
+  .card {
+    max-height: 70vh;
+    padding: 0.5rem;
+  }
+
+  .description,
+  .result,
+  .clock {
+    font-size: 0.9rem;
+  }
+
+  .crystal-wrapper {
+    transform: scale(0.8);
+  }
+}
+
+.textPath {
+color: #3008aa;
+text-decoration: none;
+font-size: 1.5rem;
+font-weight: bold;
+text-shadow: 0 0 10px #0800ff, 0 0 20px #ff00ff, 0 0 30px #00ffff;
+animation: rotateText 10s linear infinite;
+transform-origin: center;
+text-align: center;
+}
+
+
+
+
+
+
+
+

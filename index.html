@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+  
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+
+<body>
+  <div class="top-bar">
+    <h1 class="titre-horoscope">🔮Horoscope </h1>
+    <div id="clock" class="clock">
+    </div>
+  </div>
+
+  <main class="container">
+    <section class="card">
+      
+      
+      <!-- Wrapper boule + texte circulaire -->
+      <div class="crystal-wrapper">
+        <!-- Texte circulaire SVG -->
+        <svg class="circular-text" viewBox="0 0 200 200">
+          <defs>
+            <path id="circlePath" d="M100,100 m-75,0 a75,75 0 1,1 150,0 a75,75 0 1,1 -150,0" />
+          </defs>
+          <text fill="white" font-size="13" font-family="Segoe UI">
+            <textPath class="textPath" xlink:href="#circlePath">
+              🌟Tirer les 12 messages 🔮 🌟🌟🌟🌟🌟🌟🌟 🌟🌟 OracleHoroscopeduJour🔮
+            </textPath>
+          </text>
+        </svg>
+
+        <!-- Boule de cristal cliquable -->
+        <div id="drawBtn" class="crystal-ball" role="button" aria-label="Tirer les 12 messages"></div>
+      </div>
+
+      <!-- Zone de chargement / erreur / résultat -->
+      <div id="loader" class="hidden">🔄 Chargement...</div>
+      <div id="error" class="error hidden"></div>
+      <div id="result" class="result hidden"></div>
+      <div id="clock" class="clock"></div>
+    </section>
+  </main>
+
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

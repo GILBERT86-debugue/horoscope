@@ -66,25 +66,36 @@ ORACLE_HOROSCOPE/
 
 ---
 
+
 ## 📌 Trello & Suivi
 
-- Un tableau Trello a été utilisé pour organiser les tâches selon le modèle **To Do / In Progress / Done**.
-- Chaque étape a été découpée en cartes (design, API, loader, test responsive...).
+- Un tableau **Trello** a été utilisé pour organiser les tâches selon le modèle **To Do / In Progress / Done**.
+- Chaque étape a été découpée en cartes : maquette, intégration API, loader, responsive, animation, déploiement...
+- Captures d’écran du Trello disponibles dans `/docs/trello/` *(si tu veux les ajouter)*
 
-## 💻 Procédure d’installation en local
+## 🏃 Sprint & Étapes
 
-1. Cloner le dépôt GitHub :
+| Jour       | Tâches réalisées                           |
+|------------|--------------------------------------------|
+| Jour 1     | Création maquette Figma + structure HTML   |
+| Jour 2     | Intégration CSS + design boule animée      |
+| Jour 3     | Connexion à l’API + affichage dynamique    |
+| Jour 4     | Responsive complet + animations            |
+| Jour 5     | Déploiement, tests finaux & README         |
+
+## 💾 Cloner le projet
+
 ```bash
 git clone https://github.com/GILBERT86-debugue/horoscope.git
-Se rendre dans le dossier de projet :
-cd horoscope-oracle
-```
+cd oracle-horoscope
+
 
 Ouvrir index.html dans votre navigateur (aucun serveur requis pour tester en local).
 
 
 🔗 Lien vers le dépôt GitHub
-👉 [ https://github.com/GILBERT86-debugue/horoscope.git]
+https://github.com/GILBERT86-debugue/horoscope
+```
 
 
 

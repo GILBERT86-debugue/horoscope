@@ -1,30 +1,32 @@
-# 🔮 Horoscope Oracle du Jour
+# 🔮 Oracle Horoscope du Jour
+
+Bienvenue sur l'application **Oracle Horoscope du Jour** !  
+Une boule magique, 12 messages mystiques et une expérience interactive responsive pour tous les signes.
 
 ## 🎯 Objectif
 
-Ce projet web propose à l’utilisateur de tirer au hasard **12 messages inspirants** d’un oracle astrologique. L'interface immersive, centrée autour d’une boule de cristal animée, donne une expérience intuitive et magique.
-
----
+Permettre à l’utilisateur de tirer chaque jour un horoscope personnalisé de manière ludique via une boule de cristal.  
+Ce projet a été réalisé dans le cadre de la formation de développeur web & mobile.
 
 ## 🛠️ Technologies utilisées
 
-- HTML5
-- CSS3 (animations, responsive design, flex/grid, effets visuels)
-- JavaScript (fetch, API POST, DOM)
-- API : [https://oracles-api.sidathsoeun.fr/oracle_api.php]
-
----
+- HTML5 / CSS3  
+- JavaScript  
+- API REST (oracles-api.sidathsoeun.fr)  
+- Git & GitHub  
+- Figma (pour la maquette)  
+- FileZilla (pour le déploiement)
 
 ## ✨ Fonctionnalités
 
-- Interface responsive (mobile, tablette, PC, orientation portrait/paysage)
-- Design animé avec boule de cristal cliquable au centre
-- Animation de texte circulaire autour de la boule
-- Effet de pulsation doux de la boule
-- Chargement et affichage dynamique des 12 messages
-- Gestion des erreurs réseau
-- Fond d’écran étoilé ou mystique personnalisable
-- Effets CSS (ombre portée, survols, animations)
+- Interface responsive avec image de fond animée  
+- Boule de cristal interactive avec texte circulaire animé  
+- Appel d’une API POST pour récupérer 12 messages d’horoscope  
+- Affichage dynamique des résultats sous forme de cartes  
+- Bouton de régénération individuel pour chaque message  
+- Loader animé et gestion des erreurs  
+- Affichage de l’heure actuelle avec animation  
+- Compatible mobile/tablette/paysage
 
 ---
 
